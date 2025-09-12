@@ -1,0 +1,8 @@
+{
+  "arrayType": ["apple", 1, true, null, {"nestedObject": "value"}],
+  "objectType": {
+    "key1": "value1",
+    "key2": 456,
+    "key3": ["itemA", "itemB"]
+  }
+}
