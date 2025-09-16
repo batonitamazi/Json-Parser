@@ -17,6 +17,7 @@ public class Parser
 
     private bool Match(TokenType type)
     {
+        Console.WriteLine(type + " " + CurrentToken.Value + " " + CurrentToken.Type);
         if (type != CurrentToken.Type)
         {
             return false;
@@ -41,6 +42,12 @@ public class Parser
     private void ParseObject()
     {
         Expect(TokenType.LeftBrace);
+
+        if (CurrentToken.Type == TokenType.RightBrace)
+        {
+            _position++;
+            return;
+        }
 
         ParsePair();
         
